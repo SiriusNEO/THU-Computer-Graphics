@@ -40,4 +40,33 @@ Example 2: Dragon.obj, ratio=0.01, Vertices: 1047, Faces: 2091
 
 Example 3: Horse.obj, ratio=0.01, Vertices: 486, Faces: 968
 
+### Efficiency
+
+
+
+## Implementation
+
+First I try to implement in Python using `trimesh` library to load/store Mesh, but soon I found Python is too slow for this task (Although we can use Torch/Triton to parallelize some computation in GPU, the bottleneck of this algorithm (Select a pair from the top of heap, contract them, repeatedly) is hard to parallelize. So finally I embrace C++.
+
+### Load/Store Mesh
+
+The format of the mesh is not complicated. Each line represents a Vertex (start with `v`) or a Face (start with `f`). For a Vertex, the following three numbers are the coordinates (`x`, `y`, `z`); For a Face, the following three integers represent the indices of three endpoints of this triangle (Each face is a triangle).
+
+### Data Structures
+
+I implement several basic data structures which are necessary for the algorithm: `class Vertex`, `class Triangle` and `class VertexPair`. And the whole `Mesh` is wrapped as a `class Mesh` so that we can operate it easily.
+
+We allocates memory for each `Vertex` and `Triangle` (a.k.a `Face`) when loading them, and reference them using C++ pointers to avoid necessary copy.
+
+### Algorithm Implementation
+
+Most part follows the original paper. There are some points worth mentioning:
+- For the heap, I use `std::priority_queue` in C++ STL by overriding the `<` operator of `class VertexPair`. And since it's hard to perform `delete` and `update` operations in `priority_queue`, I do this in a **lazy manner**:
+  - For `delete`, I mark the corresponding vertex as removed by setting its index to `-1`. And each time we pop a pair from the heap, we will check whether the pair contains deleted vertex. If so, discard it and pop another pair.
+  - For `update`, I maintain a `timestamp` in each pair and record the newest timestamp for each `vertex_id` pair. If I found the pair we pop is not the newest, a.k.a it's expired, we will discard it too.
+- For calculating `\overline{v}` from `v1` and `v2`, we need to calculate the determinant and inverse of a 4th order matrix. I calculate it directly by violently expanding to achieve a better performance.
+
+
+### Optimization
+
 
