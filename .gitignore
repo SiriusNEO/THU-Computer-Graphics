@@ -2,5 +2,6 @@
 ms
 
 *.log
+.vscode
 
 __pycache__
