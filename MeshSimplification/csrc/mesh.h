@@ -267,7 +267,7 @@ class Mesh {
 
         // Sort indices
         auto cmp = [this](int idx0, int idx1) -> bool {
-            return vertices[idx0]->x < vertices[idx1]->x;
+            return vertices[idx0]->z < vertices[idx1]->z;
         };
         std::sort(ordered_indices.begin(), ordered_indices.end(), cmp);
 
@@ -279,7 +279,7 @@ class Mesh {
                     makeVertexPair(vertices[idx0], vertices[idx1]);
                 }
 
-                if (vertices[idx0]->x - vertices[idx1]->x > threshold) {
+                if (vertices[idx1]->z - vertices[idx0]->z > threshold) {
                     break;
                 }
             }

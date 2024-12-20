@@ -30,15 +30,17 @@ int main(int argc, char **argv) {
     mesh.simplify(ratio);
     time_t ed4 = clock();
 
-    mesh.store(output_path);
+    // mesh.store(output_path);
 
     std::cout << "Total Running Time: " << double(ed4 - st) / CLOCKS_PER_SEC
               << " (s)" << std::endl;
     std::cout << "Load Mesh Time: " << double(ed1 - st) / CLOCKS_PER_SEC
               << " (s)" << std::endl;
+    std::cout << "Calculate Q Time: " << double(ed2 - ed1) / CLOCKS_PER_SEC
+              << " (s)" << std::endl;
     std::cout << "Select Valid Pairs Time: "
-              << double(ed2 - ed1) / CLOCKS_PER_SEC << " (s)" << std::endl;
-    std::cout << "Simplify Time: " << double(ed3 - ed2) / CLOCKS_PER_SEC
+              << double(ed3 - ed2) / CLOCKS_PER_SEC << " (s)" << std::endl;
+    std::cout << "Simplify Time: " << double(ed4 - ed3) / CLOCKS_PER_SEC
               << " (s)" << std::endl;
     return 0;
 }
