@@ -30,7 +30,11 @@ int main(int argc, char **argv) {
     mesh.simplify(ratio);
     time_t ed4 = clock();
 
+    double error = mesh.evaluate();
+
     // mesh.store(output_path);
+
+    std::cout << "Evaluated Error: " << error << std::endl;
 
     std::cout << "Total Running Time: " << double(ed4 - st) / CLOCKS_PER_SEC
               << " (s)" << std::endl;

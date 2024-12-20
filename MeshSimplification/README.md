@@ -30,7 +30,7 @@ Note: `threshold=0.01` in all following settings.
 
 <img src="assets/dragon.png" alt="" width="600"/>
 
-Example 1: Dragon.obj, ratio=0.05, Vertices: 1047, Faces: 10460
+Example 1: Dragon.obj, ratio=0.05, Vertices: 5236, Faces: 10460
 
 <img src="assets/dragon1.png" alt="" width="600"/>
 
@@ -42,7 +42,16 @@ Example 3: Horse.obj, ratio=0.01, Vertices: 486, Faces: 968
 
 ### Efficiency
 
+ratio=0.1, Optimization choose y-axis to sort (Block.obj, Cube.obj, Dinosaur.obj and Sphere.obj are too simple so we don't include it)
 
+| Object | Total Time (s) | Avg. Error |
+| ------ | -------------- | ---------- |
+| Arma   | 2.27           | 4.06e-6    |
+| Buddha | 7.25           | 5.99e-05   |
+| Bunny  | 91.53          | 7.24e-07   |
+| Dragon | 30.74          | 2.17e-05   |
+| Horse  | 5.26           | 2.15e-05   |
+| Kitten | 2.30           | 0.099      |
 
 ## Implementation
 
