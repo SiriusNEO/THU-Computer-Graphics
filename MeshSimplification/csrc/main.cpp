@@ -37,8 +37,8 @@ int main(int argc, char **argv) {
     std::cout << "Load Mesh Time: " << double(ed1 - st) / CLOCKS_PER_SEC
               << " (s)" << std::endl;
     std::cout << "Select Valid Pairs Time: "
-              << double(ed2 - st) / CLOCKS_PER_SEC << " (s)" << std::endl;
-    std::cout << "Simplify Time: " << double(ed3 - st) / CLOCKS_PER_SEC
+              << double(ed2 - ed1) / CLOCKS_PER_SEC << " (s)" << std::endl;
+    std::cout << "Simplify Time: " << double(ed3 - ed2) / CLOCKS_PER_SEC
               << " (s)" << std::endl;
     return 0;
 }

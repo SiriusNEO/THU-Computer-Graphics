@@ -96,8 +96,6 @@ class Mesh {
         // Contract the VertexPair at the top of the heap.
         // Return true/false: whether the triangles are reduced.
 
-        // std::cout << pair << std::endl;
-
         if (pair.v0->isRemoved() || pair.v1->isRemoved()) {
             // Lazy deletion in the heap
             return false;
@@ -115,7 +113,7 @@ class Mesh {
             exit(-1);
         }
 
-        // std::cout << "survival" << std::endl;
+        // std::cout << pair << std::endl;
 
         ++globalTime; // Tick it
 
@@ -236,7 +234,7 @@ class Mesh {
         int newVertexId = 0;
         for (auto &v : vertices) {
             if (!v->isRemoved()) {
-                v->idx = newVertexId++;
+                v->idx = ++newVertexId;
                 os << *v << std::endl;
             }
         }

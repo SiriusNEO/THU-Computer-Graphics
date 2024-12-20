@@ -36,7 +36,7 @@ Vertex getContractedV(double *Q, Vertex *v0, Vertex *v1) {
     // \overline{v}
     Vertex ret(-1, 0, 0, 0);
 
-    if (true) {
+    if (detQ <= eps) {
         // not invertible
         ret.x = (v0->x + v1->x) / 2.0;
         ret.y = (v0->y + v1->y) / 2.0;
