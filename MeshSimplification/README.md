@@ -111,3 +111,10 @@ We can see that this pruning greatly reduces the runtime and sorting by `x`, `y`
 | Select Valid Pairs                   | 8.77       |
 | Simplify (Aggregation)               | 24.98      |
 | Total Time                           | 34.19      |
+
+
+### Implementation References
+
+- https://github.com/aronarts/MeshSimplification
+- https://github.com/xianyuggg/Mesh-Simplification
+- https://github.com/granitdula/mesh-simplification

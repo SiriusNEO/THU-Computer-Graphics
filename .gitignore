@@ -5,3 +5,12 @@ ms
 .vscode
 
 __pycache__
+
+# jdiff checker
+A_gt/
+B/
+
+# JDiffusion
+JDiffusion/
+
+result*/

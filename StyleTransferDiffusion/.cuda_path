@@ -1,0 +1,1 @@
+export nvcc_path="/scorpio/home/linchaofan/.cache/jittor/jtcuda/cuda12.2_cudnn8_linux/bin/nvcc"
