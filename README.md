@@ -10,10 +10,10 @@
 
 ## [Project 1: Implement a Mesh Simplification Algorithm "Surface Simplification Using Quadric Error Metrics", SIGGRAPH 97 in C++](MeshSimplification/)
 
-<img src="MeshSimplification/assets/dragon1.png" alt="" width="400"/>
+<img src="MeshSimplification/assets/dragon_0.05.png" alt="" width="400"/>
 
 
-
+- [Project 1 Report]()
 
 
 ## [Project 2: Style Transfer Using Diffusion (Implemented in Jittor)](StyleTransferDiffusion/)
@@ -25,3 +25,5 @@
 |                                            Crane                                             |                                            Pineapple                                             |                                             Tower                                              |                                            Watermelon                                             |
 | <img src="StyleTransferDiffusion/assets/style_viz/A_10/apple.png" width="150" height="150"/> |    <img src="StyleTransferDiffusion/assets/style_viz/A_10/Bag.png" width="150" height="150"/>    | <img src="StyleTransferDiffusion/assets/style_viz/A_10/Library.png" width="150" height="150"/> |   <img src="StyleTransferDiffusion/assets/style_viz/A_10/Whale.png" width="150" height="150"/>    |
 |                                            Apple                                             |                                               Bag                                                |                                            Library                                             |                                               Whale                                               |
+
+- [Project 2 Report]()

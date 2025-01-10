@@ -50,16 +50,16 @@ Latent Diffusion Model (LDM) 是一个在低维的 latent space 上训练过的 
 | Methods/Dataset       | A_gt  | B     |
 | --------------------- | ----- | ----- |
 | Dreambooth            | 0.317 | 0.312 |
-| StyleID               | 0.337 | 0.344 |
+| StyleID               | 0.337 | 0.334 |
 | StyleID w/ Dreambooth | 0.376 | 0.359 |
 
 其中 `StyleID` 为只使用 StyleID 算法，使用 SD v2.1 模型直接生成 content image 再进行风格注入的方法；`StyleID w/ Dreambooth` 为使用 Dreambooth 生成 content image 再进行风格注入的方法。以下是风格迁移结果的图片展示：
 
 |                         Referred Style Input                          |                                   Pic 1                                   |                                  Pic2                                   |                                    Pic3                                    |
 | :-------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :---------------------------------------------------------------------: | :------------------------------------------------------------------------: |
-| <img src="assets/style_viz/A_02/crane.png" width="150" height="150"/> | <img src="assets/style_viz/A_02/Pineapple.png" width="150" height="150"/> |  <img src="assets/style_viz/A_02/Tower.png" width="150" height="150"/>  | <img src="assets/style_viz/A_02/Watermelon.png" width="150" height="150"/> |
+| <img src="assets/style_viz/A_02/crane.png" width="250" height="250"/> | <img src="assets/style_viz/A_02/Pineapple.png" width="250" height="250"/> |  <img src="assets/style_viz/A_02/Tower.png" width="250" height="250"/>  | <img src="assets/style_viz/A_02/Watermelon.png" width="250" height="250"/> |
 |                                 Crane                                 |                                 Pineapple                                 |                                  Tower                                  |                                 Watermelon                                 |
-| <img src="assets/style_viz/A_10/apple.png" width="150" height="150"/> |    <img src="assets/style_viz/A_10/Bag.png" width="150" height="150"/>    | <img src="assets/style_viz/A_10/Library.png" width="150" height="150"/> |   <img src="assets/style_viz/A_10/Whale.png" width="150" height="150"/>    |
+| <img src="assets/style_viz/A_10/apple.png" width="250" height="250"/> |    <img src="assets/style_viz/A_10/Bag.png" width="250" height="250"/>    | <img src="assets/style_viz/A_10/Library.png" width="250" height="250"/> |   <img src="assets/style_viz/A_10/Whale.png" width="250" height="250"/>    |
 |                                 Apple                                 |                                    Bag                                    |                                 Library                                 |                                   Whale                                    |
 
 

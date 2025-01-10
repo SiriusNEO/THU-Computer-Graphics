@@ -28,17 +28,13 @@ Note: `threshold=0.01` in all following settings.
 
 ### Visualization of Some Examples
 
-<img src="assets/dragon.png" alt="" width="600"/>
+|            |               Original Mesh                |                   ratio=0.05                    |                   ratio=0.01                    |
+| :--------: | :----------------------------------------: | :---------------------------------------------: | :---------------------------------------------: |
+| Dragon.obj | <img src="assets/dragon.png" width="300"/> | <img src="assets/dragon_0.05.png" width="300"/> | <img src="assets/dragon_0.01.png" width="300"/> |
+|            |      Vertices: 104855, Faces: 209227       |          Vertices: 5236, Faces: 10460           |           Vertices: 1047, Faces: 2091           |
+| Horse.obj  | <img src="assets/horse.png" width="300"/>  | <img src="assets/horse_0.05.png" width="300"/>  | <img src="assets/horse_0.01.png" width="300"/>  |
+|            |       Vertices: 48485, Faces: 96966        |           Vertices: 2426, Faces: 4848           |            Vertices: 486, Faces: 968            |
 
-Example 1: Dragon.obj, ratio=0.05, Vertices: 5236, Faces: 10460
-
-<img src="assets/dragon1.png" alt="" width="600"/>
-
-Example 2: Dragon.obj, ratio=0.01, Vertices: 1047, Faces: 2091
-
-<img src="assets/horse.png" alt="" width="600"/>
-
-Example 3: Horse.obj, ratio=0.01, Vertices: 486, Faces: 968
 
 ### Efficiency
 
