@@ -6,7 +6,7 @@ int main(int argc, char **argv) {
     double ratio;
 
     if (argc < 4) {
-        std::cout << "Usage: simplify <input> <output> <ratio>" << std::endl;
+        std::cout << "Usage: ms <input> <output> <ratio>" << std::endl;
         exit(0);
     }
 
@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
 
     double error = mesh.evaluate();
 
-    // mesh.store(output_path);
+    mesh.store(output_path);
 
     std::cout << "Evaluated Error: " << error << std::endl;
 
