@@ -49,9 +49,9 @@ Latent Diffusion Model (LDM) 是一个在低维的 latent space 上训练过的 
 
 | Methods/Dataset       | A_gt  | B     |
 | --------------------- | ----- | ----- |
-| Dreambooth            | 0.317 | 0.203 |
-| StyleID               | 0.337 |       |
-| StyleID w/ Dreambooth | 0.376 |       |
+| Dreambooth            | 0.317 | 0.312 |
+| StyleID               | 0.337 | 0.344 |
+| StyleID w/ Dreambooth | 0.376 | 0.359 |
 
 其中 `StyleID` 为只使用 StyleID 算法，使用 SD v2.1 模型直接生成 content image 再进行风格注入的方法；`StyleID w/ Dreambooth` 为使用 Dreambooth 生成 content image 再进行风格注入的方法。以下是风格迁移结果的图片展示：
 
@@ -78,7 +78,7 @@ conda activate jdiff_eval
 pip install -r requirements.txt
 ```
 
-然后运行 `check.sh` 得到分数。注意修改相关路径，其中 `upload_path` 指的是待评测算法生成的图片的路径，应该是一个由不同风格编号组成的目录（`00/`，`01/`，...），`result_path` 是我们打分结果输出的路径。第一次运行时候我遇到了 `lpip_score` 在评测的时候报了如下错误：
+然后运行 `check.sh` 得到分数。注意修改相关路径，其中 `upload_path` 指的是待评测算法生成的图片的路径，应该是一个由不同风格编号组成的目录（`00/`，`01/`，...），`result_path` 是我们打分结果输出的路径，`gt_path` 是原数据集所在目录。第一次运行时候我遇到了 `lpip_score` 在评测的时候报了如下错误：
 ```bash
 RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
 ```

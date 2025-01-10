@@ -11,11 +11,12 @@ from PIL import Image
 import numpy as np
 
 
-def get_score(upload_path, result_path):
+def get_score(upload_path, gt_path, result_path):
     # ref_images = {}
 
     ref_style_numbers = 15
-    A_ref_gt_path = "../A_gt"
+    # A_ref_gt_path = "../A_gt"
+    # A_ref_gt_path = "../B"
     # A_ref_gt_prompts_path = os.path.join(A_ref_gt_path, "prompts.json")
     # load prompts
     # with open(A_ref_gt_prompts_path, 'r') as f:
@@ -26,7 +27,7 @@ def get_score(upload_path, result_path):
     for style_idx in range(ref_style_numbers):
         style_idx_str = str(style_idx).zfill(2)
         style_idx_str = str(style_idx).zfill(2)
-        gt_style_path = os.path.join(A_ref_gt_path, style_idx_str, "images")
+        gt_style_path = os.path.join(gt_path, style_idx_str, "images")
         upload_style_path = os.path.join(upload_path, style_idx_str)
         gt_style_img_paths[style_idx_str] = gt_style_path
         upload_style_img_path[style_idx_str] = upload_style_path
@@ -265,14 +266,16 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # upload path result path
     parser.add_argument('--upload_path', type=str)
+    parser.add_argument('--gt_path', type=str)
     parser.add_argument('--result_path', type=str)
     args = parser.parse_args()
     upload_path = args.upload_path
     result_path = args.result_path
+    gt_path = args.gt_path
 
     import time
     start_time = time.time()
-    res = get_score(upload_path, result_path)
+    res = get_score(upload_path, gt_path, result_path)
     print(res)
     print("time: ", time.time() - start_time)
     # print(get_clip_scores(upload_images))

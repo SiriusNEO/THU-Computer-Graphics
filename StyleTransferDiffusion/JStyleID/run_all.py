@@ -10,7 +10,7 @@ max_num = 28
 dreambooth_lora_weights = "../JDiffusion/examples/dreambooth"
 # dataset_root = "/scorpio/home/linchaofan/THU-Computer-Graphics/StyleTransferDiffusion/checker/A_gt"
 dataset_root = "/scorpio/home/linchaofan/THU-Computer-Graphics/StyleTransferDiffusion/checker/B"
-save_dir = "./results_B/"
+save_dir = "./results_B_wo_db/"
 
 async def text2image_worker(consumer_num, queue):
     with jt.no_grad():
@@ -18,7 +18,7 @@ async def text2image_worker(consumer_num, queue):
             taskid = "{:0>2d}".format(tempid)
             pipe = StableDiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-2-1").to("cuda")
 
-            pipe.load_lora_weights(f"{dreambooth_lora_weights}/style_B/style_{taskid}")
+            # pipe.load_lora_weights(f"{dreambooth_lora_weights}/style_B/style_{taskid}")
 
             # load json
             with open(f"{dataset_root}/{taskid}/prompt.json", "r") as file:
