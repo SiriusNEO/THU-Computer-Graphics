@@ -55,12 +55,12 @@ Latent Diffusion Model (LDM) 是一个在低维的 latent space 上训练过的 
 
 其中 `StyleID` 为只使用 StyleID 算法，使用 SD v2.1 模型直接生成 content image 再进行风格注入的方法；`StyleID w/ Dreambooth` 为使用 Dreambooth 生成 content image 再进行风格注入的方法。以下是风格迁移结果的图片展示：
 
-|                         Referred Style Input                          |                                   Pic 1                                   |                                  Pic2                                   |                                    Pic3                                    |
-| :-------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :---------------------------------------------------------------------: | :------------------------------------------------------------------------: |
-| <img src="assets/style_viz/A_02/crane.png" width="250" height="250"/> | <img src="assets/style_viz/A_02/Pineapple.png" width="250" height="250"/> |  <img src="assets/style_viz/A_02/Tower.png" width="250" height="250"/>  | <img src="assets/style_viz/A_02/Watermelon.png" width="250" height="250"/> |
-|                                 Crane                                 |                                 Pineapple                                 |                                  Tower                                  |                                 Watermelon                                 |
-| <img src="assets/style_viz/A_10/apple.png" width="250" height="250"/> |    <img src="assets/style_viz/A_10/Bag.png" width="250" height="250"/>    | <img src="assets/style_viz/A_10/Library.png" width="250" height="250"/> |   <img src="assets/style_viz/A_10/Whale.png" width="250" height="250"/>    |
-|                                 Apple                                 |                                    Bag                                    |                                 Library                                 |                                   Whale                                    |
+|                   Referred Style Input                   |                            Pic 1                             |                            Pic2                            |                              Pic3                              |
+| :------------------------------------------------------: | :----------------------------------------------------------: | :--------------------------------------------------------: | :------------------------------------------------------------: |
+| <img src="assets/style_viz/A_02/crane.png" width="250"/> | <img src="assets/style_viz/A_02/Pineapple.png" width="250"/> |  <img src="assets/style_viz/A_02/Tower.png" width="250"/>  | <img src="assets/style_viz/A_02/Watermelon.png" width="250" /> |
+|                          Crane                           |                          Pineapple                           |                           Tower                            |                           Watermelon                           |
+| <img src="assets/style_viz/A_10/apple.png" width="250"/> |    <img src="assets/style_viz/A_10/Bag.png" width="250"/>    | <img src="assets/style_viz/A_10/Library.png" width="250"/> |    <img src="assets/style_viz/A_10/Whale.png" width="250"/>    |
+|                          Apple                           |                             Bag                              |                          Library                           |                             Whale                              |
 
 
 
@@ -130,6 +130,8 @@ bash test_styleid.sh
 ```bash
 python3 run_all.py
 ```
+
+如果环境中只有单卡 GPU，请运行 `run_all_single_gpu.py`。注意，运行本实验有一定的显存要求（多卡环境，每张卡需20G显存；单卡环境需30G）。
 
 
 ## Related Links
