@@ -17,7 +17,7 @@
 <img src="MeshSimplification/assets/dragon_0.05.png" alt="" width="400"/>
 
 
-- [Project 1 Report]()
+- [Project 1 Report](./Reports/Project1_Report.pdf)
 
 
 ## [Project 2: Style Transfer Using Diffusion (Implemented in Jittor)](StyleTransferDiffusion/)
@@ -30,4 +30,5 @@
 | <img src="StyleTransferDiffusion/assets/style_viz/A_10/apple.png" width="150" height="150"/> |    <img src="StyleTransferDiffusion/assets/style_viz/A_10/Bag.png" width="150" height="150"/>    | <img src="StyleTransferDiffusion/assets/style_viz/A_10/Library.png" width="150" height="150"/> |   <img src="StyleTransferDiffusion/assets/style_viz/A_10/Whale.png" width="150" height="150"/>    |
 |                                            Apple                                             |                                               Bag                                                |                                            Library                                             |                                               Whale                                               |
 
-- [Project 2 Report]()
+- [Project 2 Report](./Reports/Project2_Report.pdf)
+
